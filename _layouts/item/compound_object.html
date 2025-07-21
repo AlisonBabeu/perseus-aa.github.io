@@ -6,7 +6,19 @@ layout: item/item-page-base
 gallery: true
 custom-foot: js/modal-hash-js.html
 ---
-{% assign children = site.data[site.metadata] | where_exp: 'item','item.parentid == page.objectid' %}
+{% assign objectid = page.objectid %}
+{% assign children = "" | split: "" %}
+
+{% for item in site.data[site.metadata] %}
+{% assign parents = item.parentid | split: ',' %}
+{% assign childid = item.objectid %}
+
+{% if parents contains objectid %}
+
+{% assign children = children | push: item %}
+{% endif %}
+
+{% endfor %}
 
 <div class="mb-4 ">
     

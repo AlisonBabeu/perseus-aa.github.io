@@ -12,7 +12,7 @@
 
 
   <!-- column 1 -->
-  <div class="col-md-3">
+  <div class="col-md-6">
     <dl>
       <dt>ID:</dt>
       <dd>{{ page.id }}</dd>
@@ -100,15 +100,6 @@
       <dd>{{ page.architect_mod}} {{ page.architect }}</dd>
       {% endif %}
 
-
-
-    </dl>
-  </div>
-
-
-  <!-- column 2 -->
-  <div class="col-md-3">
-    <dl>
       {% if page.condit %}
       <dt>Condition:</dt>
       <dd>{{ page.condit }}</dd>
@@ -224,11 +215,14 @@
       <dt>Issuing Authority:</dt>
       <dd>{{ page.issuing_authority }}</dd>
       {% endif %}
+
+
     </dl>
   </div>
 
 
-  <!-- column 3 -->
+
+  <!-- column 2 -->
   <div class="col-md-6">
       {% if page.date_description %}
       <h5>Date Description</h5>
@@ -347,5 +341,3 @@
     {% endif %}
   </div>
 </div>
-
-

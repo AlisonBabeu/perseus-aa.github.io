@@ -1,8 +1,3 @@
-body {
-    background-color: #bdb6b5;
-}
-
-
 dl {
     display: grid;
     grid-template-columns: auto 1fr;
